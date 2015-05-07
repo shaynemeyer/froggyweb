@@ -1,0 +1,16 @@
+2015-05-07T07:41:26.422485000 0.551888s notice: Recursively removing directory /Users/shayne/sites/froggy/froggyweb/rethinkdb_data/tmp
+2015-05-07T07:41:26.424096000 0.553503s notice: Initializing directory /Users/shayne/sites/froggy/froggyweb/rethinkdb_data
+2015-05-07T07:41:26.424182000 0.553583s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/shayne/sites/froggy/froggyweb/rethinkdb_data' did not already exist or is empty.)
+2015-05-07T07:41:26.424214000 0.553616s notice: Running rethinkdb 2.0.1 (CLANG 4.2 (clang-425.0.28))...
+2015-05-07T07:41:26.428237000 0.557639s notice: Running on Darwin 14.3.0 x86_64
+2015-05-07T07:41:26.428275000 0.557677s notice: Loading data from directory /Users/shayne/sites/froggy/froggyweb/rethinkdb_data
+2015-05-07T07:41:26.568684000 0.698086s info: Automatically using cache size of 4069 MB
+2015-05-07T07:41:26.569303000 0.698705s notice: Listening for intracluster connections on port 29015
+2015-05-07T07:41:26.570024000 0.699425s notice: Listening for client driver connections on port 28015
+2015-05-07T07:41:26.570082000 0.699483s notice: Listening for administrative HTTP connections on port 8080
+2015-05-07T07:41:26.570087000 0.699488s notice: Listening on addresses: 127.0.0.1, ::1
+2015-05-07T07:41:26.570089000 0.699490s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-05-07T07:41:26.570092000 0.699493s notice: Server ready, "Shaynes_MacBook_Pro_local_wco" 08244d72-49b6-40e9-8568-f4b0c38e483a
+2015-05-07T11:27:23.752794000 12835.542944s notice: Someone asked for the nonwhitelisted file "/ionicons.ttf".  If this should be accessible, add it to the static web assets.
+2015-05-07T11:27:23.840306000 12835.630456s notice: Someone asked for the nonwhitelisted file "/ionicons.woff".  If this should be accessible, add it to the static web assets.
+2015-05-07T11:27:23.864400000 12835.654550s notice: Someone asked for the nonwhitelisted file "/ionicons.svg".  If this should be accessible, add it to the static web assets.

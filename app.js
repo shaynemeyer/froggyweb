@@ -10,6 +10,37 @@ var users = require('./routes/users');
 
 var app = express();
 
+require("./routes/account")(app);
+
+
+
+
+var passport = require('passport')
+    , LocalStrategy = require('passport-local').Strategy;
+
+var Membership = require("froggy-membership");
+var memb = new Membership("membership");
+
+passport.use(new LocalStrategy(
+    function(email, password, done) {
+        memb.authenticate(email, password, function(err, authResult){
+            if(authResult.success){
+                done(null, authResult.user);
+            } else {
+                done(null, false, {message: authResult.message});
+            }
+        });
+    }
+));
+
+passport.serializeUser(function (user, done) {
+   done(null, user.authenticationToken);
+});
+
+passport.deserializeUser(function(token, done){
+   memb.findUserByToken(token, done);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -19,8 +50,12 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser("double secret probation"));
+
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', routes);
 app.use('/users', users);
